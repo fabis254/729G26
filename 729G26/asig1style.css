@@ -1,0 +1,83 @@
+body, html {
+	background-color: gray;
+	margin: 0;
+	/*border:none;
+	padding: none;*/
+	height: 100%;
+}
+div {
+	height: 250px;
+	display: block;a
+	position: absolute;
+	text-align: left;
+	width: 250px;
+	font-family: "calibri";
+	font-size: 20px;
+}
+
+.center {
+	height: 100%;
+	width: 50%;
+	background-color: white;
+	color: blue;
+	/*padding-top: 5%;*/
+	text-overflow: none;
+	display: block;
+	position: relative;
+	text-align: center;
+	margin: 0 auto 0 auto;
+	font-size: 56px;
+	bottom:0px;
+}
+
+.center div {
+	width: 100%;
+	height: 150px;
+	position: relative;
+	display: block;
+}
+
+.a {
+	background-color:lightgreen;
+	left:-5%;
+	top: 5%;
+}
+.b {
+	background-color:purple;
+	top:15%;
+	left:5%;
+}
+.c {
+	background-color: orange;
+	top:25%;
+}
+.d {
+	background-color: green;
+	left:5%;
+	top: 17.5%;
+}
+
+.upper-left {
+	left: 0;
+	float: left;
+	top: 0;
+	background-color: white;
+}
+
+.bottom-left {
+	left: 0px;
+	bottom: 0px;
+	background-color: white;
+}
+
+.upper-right {
+	right: 0;
+	top: 0;
+	background-color: white;
+}
+
+.bottom-right {
+	right: 0;
+	bottom: 0;
+	background-color: white;
+}
