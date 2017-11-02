@@ -1,0 +1,16 @@
+body {
+	background-color: #FFC;
+}
+
+.input {
+
+}
+
+.flex {
+
+}
+
+.column {
+	display: flex;
+	flex-order: column;
+}

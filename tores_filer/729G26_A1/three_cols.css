@@ -1,0 +1,110 @@
+
+
+body {
+	background-color: gray;
+}
+
+.container {
+	background-color: white;
+	width: 75%;
+	height: 90%;
+	margin: auto;
+	padding: 0px;
+}
+
+.columns {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.columns:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.column {
+	background-color: white;
+	float: left;
+	width: 27.33%;
+	padding: 3%;
+	font: 16px Arial, sans-serif;
+}
+
+
+.menu-bar {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.menu-tab {
+	background-color: black;
+	position: sticky;
+	float: left;
+	width: calc(100%/3);
+	color: white;
+	font: 20px Arial, sans-serif;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.menu-bar:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.footer {
+	background-color: black;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	font: bold 16px Arial;
+}
+
+
+@media screen and (max-width: 560px) {
+	body {
+		padding: 0px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.menu-tab {
+		width: 95%;
+		position: relative;
+		margin-bottom: 5px;
+		text-align: left;
+		padding-left: 5%;
+		float: none;
+
+	}
+}
+@media screen and (max-width: 560px) {	
+		.column {
+		width: 90%;
+		position: relative;
+		padding: 5%;
+		top: 5%;
+		float: none;
+		font-size: 14px;
+
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.container {
+		width: 100%;
+		margin: none;
+		margin: 0px;
+		border: 0px;
+		padding: 0px;
+	}
+}

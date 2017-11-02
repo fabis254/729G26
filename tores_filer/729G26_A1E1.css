@@ -1,0 +1,93 @@
+body {
+	background-color: grey;
+}
+
+.center-block {
+	background-color: white;
+	position: absolute;
+	top: 0px;
+	left: 30%;
+	width: 40%;
+	height: 100%;
+
+	text-align: center;
+}
+
+.side {
+	background-color: grey;
+	position: absolute;
+	width: 33%;
+	height: 100%;
+}
+#right-side {
+	right: 0px;
+}
+
+#left-side {
+	left: 0px;
+}
+.heading { 
+	color: #00CCFF;
+	font-family: sans-serif;
+	align-self: center;
+
+}
+
+.corner {
+	background-color: white;
+	text-align: left;
+	position: absolute;
+	width: 20%;
+	height: 25%;
+	font-family: sans-serif;
+
+}
+
+#upper-left {
+	top: 0px;
+	left: 0px;
+}
+
+#lower-left {
+	bottom: 0px;
+	left: 0px;
+}
+
+#upper-right {
+	top: 0px;
+	right: 0px;
+}
+
+#lower-right {
+	bottom: 0px;
+	right: 0px;
+}
+
+.box {
+	width: 100%;
+	height:15%;
+	position: relative;
+}
+
+#light-green {
+	background-color: #32CD32;
+	left: -5%;
+}
+
+#purple {
+	background-color: #BA55D3;
+	top: 10%;
+	left: 5%;
+}
+
+#orange {
+	background-color: peru;
+	top: 20%;
+}
+
+#green {
+	background-color: green;
+	top: 13%;
+	left: 5%;
+
+}
