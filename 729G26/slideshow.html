@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slideshow</title>
+	 <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="slideshow.css">
+</head>
+<body>
+	<div class="bigbox">
+		<div class="container">
+			<button id="back" class="toggle back"></button>
+			<div class="photobox white_bg">
+				<img id="pic" src="images2/image1.jpg">
+				<div class="bkg">
+					<h2 id="pic_text" class="pic_text">Cat with book 1</h2>
+				</div>
+			</div>
+			<button id="forward" class="toggle forward"></button>
+		</div>
+		<!-- <div class="container"> -->
+		<div class="bar">
+			<table id="image_table" style="pointer-events: none">
+				<td><img id="1" src="images2/image1-small.jpg" alt="Cat with book 1"></td>
+				<td><img id="2" src="images2/image2-small.jpg" alt="Cat with book 2"></td>
+				<td><img id="3" src="images2/image3-small.jpg" alt="Cat in tree"></td>
+				<td><img id="4" src="images2/image4-small.jpg" alt="Cat on carpet"></td>
+				<td><img id="5" src="images2/image5-small.jpg" alt="Cat currently sleeping"></td>
+				<td><img id="6" src="images2/image6-small.jpg" alt="Easter cat"></td>
+				<td><img id="7" src="images2/image7-small.jpg" alt="Cat? What are you doing?"></td>
+				<td><img id="8" src="images2/image8-small.jpg" alt="Proud cat"></td>
+			</table>
+		</div>
+		<!-- </div> -->
+		<p id="explainer"></p>
+	</div>
+	<script type="text/javascript">
+		// update which image is shown
+		var img_counter = 1;
+		// Activate the border on the initial image
+		document.getElementById(img_counter).style.border  = "solid white 10px";
+		// Display next image when toggle-right
+		document.getElementById("forward").addEventListener("click", function(){ toggle("forward"); });
+		// Display previous image when toggle back
+		document.getElementById("back").addEventListener("click", function(){ toggle("back"); });
+		// Display the selected image from image table
+		document.getElementById("image_table").addEventListener("click", function(event){ toggle(event.target.id); });
+		// Also listen to arowkey right
+		document.addEventListener("keydown", function(event){ toggle(event.keyCode); });
+		// Define toogle function
+		function toggle(direction) {
+			// Set previous image
+			previous_img = img_counter;
+			if (direction === "forward" || direction === 39) {
+			 	// Update image counter
+			 	img_counter += 1;
+			 	if (img_counter > 8) {
+			 	 	document.getElementById("8").style.border  = "solid transparent 10px";
+			 	 	img_counter = 1;
+			 	}
+			}
+			else if (direction === "back"  || direction === 37) { 	
+			 	img_counter -= 1;
+				if (img_counter < 1) {
+			  		document.getElementById("1").style.border  = "solid transparent 10px";
+			  		img_counter = 8;
+				}
+			}
+			else {
+				img_counter = direction;
+			}
+			// Show border on the currently displayed image
+			if (img_counter != previous_img) {
+		    document.getElementById(img_counter).style.border  = "solid white 10px";
+		    // Hide border on previous image
+		    document.getElementById(previous_img).style.border  = "solid transparent 10px";
+		 	// Set the image shown in photobox to the new image
+	     	var text = document.getElementById(img_counter).alt;
+		    document.getElementById("pic_text").innerHTML = text;
+			document.getElementById("pic").src = "images2/image" + img_counter + ".jpg";
+			}	
+		};
+	</script>
+</body>
+</html>
