@@ -67,7 +67,7 @@ body, html {
 }
 
 @media only screen and (max-width: 400px) {
-	[class*="menu"] div {
+	[class*="menu_head"] {
 		flex: 0 0 100%;
 	}
 	[class="col"]{
