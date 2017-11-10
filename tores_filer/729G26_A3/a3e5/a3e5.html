@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 3. Exercise 5</title>
+  <meta charset=utf-8>
+  <link rel="stylesheet" type="text/css" href="a3e5.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="navigation">
+     <div class="dropdown"> </div> 
+     <div class="dropdown"> </div>    
+     <div class="dropdown"> </div>
+     <div class="dropdown"> </div>
+     <div class="dropdown"> </div>    
+     <div class="dropdown"> </div>    
+  </div>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $(".dropdown").mouseenter(function() {
+      $(this).stop();
+      $(this).animate( { "height": "300" }, 500);
+    });
+    $(".dropdown").mouseleave(function() {
+      $(this).stop();
+      $(this).animate( { "height": "50px"}, 500);
+    });
+  });
+  </script>
+</body>

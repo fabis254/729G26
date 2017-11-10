@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A3E6</title>
+	<link rel="stylesheet" type="text/css" href="a3e6.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+			<button>Button 1</button>
+			<div class="square"></div>
+	</div>
+	<div class="row">
+			<button>Button 1</button>
+			<div class="square"></div>
+	</div>
+	<div class="row">
+			<button>Button 1</button>
+			<div class="square"></div>
+	</div>
+	<div class="row">
+		<input type="range" id="slider">
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			var slideVal = $("#slider").val();
+			$(this).toggleClass("border");
+			$(this).siblings().toggleClass("large")
+			$(this).siblings().css("background-color", "rgba(213, 80, 113, "+slideVal/100+")");
+		});
+	})
+</script>
+	
+</body>
+</html>

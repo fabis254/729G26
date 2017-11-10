@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Slideshow</title>
+	<link rel="stylesheet" type="text/css" href="A12E1_729G26.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="arrow-button" id="prev" onclick="nextSlide(-1)">&#10094;</div>
+	<div id="image-holder" onclick="nextSlide(1)"></div>
+	<div class="arrow-button" id="next" onclick="nextSlide(1)">&#10095;</div>
+</div>
+
+<div id="slides-holder" style="width: 90%; margin: auto;">
+</div>
+
+<p id="print"></p>
+
+
+
+<script type="text/javascript">
+var image_holder = document.getElementById("image-holder");
+var slides_holder = document.getElementById("slides-holder");
+var printer = document.getElementById("print");
+
+
+
+
+
+
+var images= [
+"images/image1.jpg",
+"images/image2.jpg",
+"images/image3.jpg",
+"images/image4.jpg",
+"images/image5.jpg",
+"images/image6.jpg",
+"images/image7.jpg",
+"images/image8.jpg"
+];
+
+var img_nr = 0;
+var selected = 0;
+var img_max = images.length-1;
+
+thumb_width = 80/img_max;
+
+slides_html = ""
+// Create divs for each image in images
+for (i=0; i<= img_max; i++) {
+	slides_html += '<div id="thumb'+i+'" class="thumbnail" style="width: '+thumb_width+'%;"><img src='+images[i]+'></img></div>';
+}
+slides_holder.innerHTML = slides_html;
+
+
+// Set start image
+image_holder.innerHTML ="<img src='"+images[img_nr]+"'></img>";
+
+
+// Set first select
+var newSelect = document.getElementById("thumb"+img_nr);
+newSelect.className="thumbnail selected";
+
+function nextSlide(n) {
+	img_nr += n;
+	if(img_nr < 0) {
+		img_nr = img_max;
+	}
+	else if (img_nr > img_max) {
+		img_nr = 0;
+	}
+	updateSelect(img_nr);
+	selected = img_nr;
+	image_holder.innerHTML ="<img src='"+images[img_nr]+"'></img>";
+}
+
+function updateSelect(nr) {
+	var oldSelect = document.getElementById("thumb"+selected);
+	var newSelect = document.getElementById("thumb"+nr);
+	oldSelect.className="thumbnail";
+	newSelect.className="thumbnail selected";
+
+}
+
+function print(m) {
+	printer.innerHTML += "<br>" + m;
+}
+
+
+
+</script>
+
+</body>
+</html>

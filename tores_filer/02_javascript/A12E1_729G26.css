@@ -1,0 +1,75 @@
+body {
+	background-color: #eee;
+}
+.container {
+	position: relative;
+	top: 20%;
+	width: 80%;
+	height: 400px;
+	margin: auto;
+
+ }
+.arrow-button {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 20%;
+	width: 5%;
+	text-align: center;
+}
+
+.arrow-button:hover {
+	background-color: white;
+	cursor: pointer;
+
+}
+
+#image-holder {
+	background-color: white;
+	float: left;
+	position: relative;
+	top: 30%;
+	left: 20%;
+	padding: 2%;
+	width: 50%;
+	margin: auto;
+}
+
+
+#image-holder img {
+	width: 100%;
+	height: 100%;
+}
+
+.image-text {
+	background-color: black;
+	position: absolute;
+	bottom: 2%;
+	width: 93%;
+	height: 50px;
+	opacity: 0.6;
+}
+
+.slides-holder {
+	padding: 0px;
+	margin: auto;
+}
+
+.thumbnail {
+	background-color: white;
+	float: left;
+	width: 10%;
+	padding: 2px;
+	border: 1px;
+	border-color: gray;
+	margin: auto;
+
+}
+
+.thumbnail img {
+	width: 100%;
+}
+
+.selected {
+	background-color: blue;
+}

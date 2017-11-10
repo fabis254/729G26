@@ -1,0 +1,56 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin: auto;
+}
+
+.row {
+	height: 150px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.row > * {
+	box-sizing: border-box;
+	margin: auto;
+}
+/*
+.btn-div {
+	display: flex;
+	height: 200;
+	align-content: center;
+	justify-content: center;
+	align-items: baseline;
+	flex: 1;
+}
+.sqr-div {
+	flex: 1;
+}
+
+*/
+.square {
+	background-color: #D55071;
+	height: 100px;
+	width: 100px;
+}
+
+button {
+	height: 40px;
+	width: 100px;
+}
+
+.border{
+	border: 4px solid blue;
+}
+
+.large {
+	width: 150px;
+	height: 150px;
+}
+
+#slider {
+	width: 60%;
+	margin: auto;
+}
