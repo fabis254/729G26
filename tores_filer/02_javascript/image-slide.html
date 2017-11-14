@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>image-slide</title>
+	<link rel="stylesheet" type="text/css" href="image-slider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="image-window">
+	<div id="image-container">
+		<image src="images/image1.jpg"></image>
+		<image src="images/image2.jpg"></image>
+		<image src="images/image3.jpg"></image>
+		<image src="images/image4.jpg"></image>
+	</div>
+	<div id="print"></div>
+</div>
+
+<script>
+var imageHolder = document.getElementById("image-container");
+document.addEventListener("keydown", function(e) {
+	console.log("in KeydownHandler");
+	if (e.keyCode == 37) {
+		$("#image-container").animate({"left": "-=200px"}, 1000);
+	}
+	else if (e.keyCode == 39) {
+		$("#image-container").animate({"left": "+=200px"}, 1000);
+	}
+});
+
+</script>
+
+</body>
+</html>
