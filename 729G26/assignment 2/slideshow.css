@@ -10,7 +10,7 @@ body, html {
 	flex-wrap: wrap;
 	justify-content: center;
 	background-color: lightgray;
-	overflow: auto;
+	/*border: solid black 10px;*/
 }
 
 .white_bg {
@@ -27,28 +27,7 @@ body, html {
           align-items: center;
     -webkit-justify-content: center;
             justify-content: center;
-}
-
-.bar {
-	width: 90%;
-	display: -webkit-flex;
-    display:         flex;
-    -webkit-align-items: center;
-          align-items: center;
-    justify-content: space-around;
-    margin-bottom: 10%;
-
-}
-
-.bar img {
-	height: 80%;
-	width: 90%;
-	border: solid transparent 10px;
-	pointer-events: auto;
-}
-
-.bar table > * {
-
+    /*border: solid green 10px;*/
 }
 
 .photobox {
@@ -79,11 +58,34 @@ body, html {
 	height: 20%;
 	background-color: rgba(0,0,0,0.5);
 	align-items: center;
+	/*text-align: center;
+	padding-left: 5%;
+	font-weight: 600;*/
 }
+
 .photobox h2 {
 	padding-left: 5%;
 	font-size: 100%;
 }
+
+.bar {
+	width: 90%;
+	display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+          align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10%;
+    pointer-events: none;
+    /*border: solid red 10px;*/
+}
+
+.bar img {
+	width: 90%;
+	border: solid transparent 10px;
+	pointer-events: auto;
+}
+
 .toggle {
 	margin-right: 1%;
 	margin-left: 1%;
