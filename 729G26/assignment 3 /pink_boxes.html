@@ -32,8 +32,9 @@
 				$(".row").removeClass("selected");
 				$(".box").animate({"width": "100px", "height": "100px"});
 
-				$(this).parent().addClass("selected")
-				$("#slider").val($(this).next().css("opacity"))
+				$(this).parent().addClass("selected");
+				$("#slider").val($(this).next().css("opacity"));
+				$(this).next().animate({"height": "120px", "width": "120px"})
 
 			})
 			$("#slider").on("change", function() {
