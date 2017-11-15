@@ -20,8 +20,8 @@
 			<button>Button 3</button>
 			<div class="box"></div>
 		</div>
-		<div class="row slider">
-			<input type="range" min="0" max="1" step="0.1" id="slider">
+		<div class="row">
+			<input class="slider" type="range" min="0" max="1" step="0.1" id="slider">
 		</div>
 	</div>
 
@@ -29,15 +29,15 @@
 		$(document).ready(function() {
 
 			$("button").click(function() {
+
 				$(".row").removeClass("selected");
-				$(".box").animate({"width": "100px", "height": "100px"});
 
 				$(this).parent().addClass("selected")
 				$("#slider").val($(this).next().css("opacity"))
 
 			})
 			$("#slider").on("change", function() {
-				$(".selected").children().last().css({"opacity": $(this).val()});
+				$(".selected").children().last().animate({"opacity": $(this).val()}, 50);
 			})
 
 		})
