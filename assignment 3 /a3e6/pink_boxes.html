@@ -29,13 +29,9 @@
 		$(document).ready(function() {
 
 			$("button").click(function() {
-
 				$(".row").removeClass("selected");
-
-				$(this).parent().addClass("selected");
-				$("#slider").val($(this).next().css("opacity"));
-				$(this).next().animate({"height": "120px", "width": "120px"})
-
+				$(this).parent().addClass("selected")
+				$("#slider").val($(this).next().css("opacity"))
 			})
 			$("#slider").on("change", function() {
 				$(".selected").children().last().animate({"opacity": $(this).val()}, 50);
