@@ -1,0 +1,12 @@
+#image-window {
+	width: 200px;
+	overflow-x: hidden;
+}
+
+#image-container {
+	display: flex;
+	width: 800px;
+	position: relative;
+	left: -200px;
+	overflow: hidden;
+}
