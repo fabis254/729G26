@@ -37,6 +37,7 @@
 
 		$("#style_button").on("click", function() {
 			var style = $("#style_select").val();
+			console.log(style)
 			if (style === "none") {
 				$("#output" + active_p).removeClass();
 			} else {
