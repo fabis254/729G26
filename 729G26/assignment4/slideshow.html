@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>lightSlider Demo</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet"  href="src/css/lightslider.css"/>
+    <style>
+    	ul{
+			list-style: none outside none;
+		    padding-left: 0;
+            margin: 0;
+            align-items: center;
+		}
+        .demo .item{
+            margin-bottom: 60px;
+        }
+		.demo{
+			width: 800px;
+			margin: auto;
+			margin-top: 60px;
+		}
+		.clearfix img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="src/js/lightslider.js"></script> 
+    <script>
+    	 $(document).ready(function() {
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }  
+            });
+		});
+    </script>
+</head>
+<body>
+	<div class="demo" align="center">
+        <div class="item">            
+            <div class="clearfix" style="max-width:800px;">
+                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                    
+                    <li data-thumb="images2/image1-small.jpg"> 
+                        <img src="images2/image1.jpg" />
+                    </li>
+                    <li data-thumb="images2/image2-small.jpg"> 
+                        <img src="images2/image2.jpg" />
+                    </li>
+					<li data-thumb="images2/image3-small.jpg"> 
+                        <img src="images2/image3.jpg" />
+                    </li>
+					<li data-thumb="images2/image4-small.jpg"> 
+                        <img src="images2/image4.jpg" />
+                    </li>
+                    <li data-thumb="images2/image5-small.jpg"> 
+                        <img src="images2/image5.jpg" />
+                    </li>
+					<li data-thumb="images2/image6-small.jpg"> 
+                        <img src="images2/image6.jpg" />
+                    </li>
+					
+                </ul>
+            </div>
+        </div>
+    </div>	
+</body>
