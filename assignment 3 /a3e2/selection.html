@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selection</title>
+		 <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="selection_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		 $(document).ready(function(){
+			  $("select").change(function(){
+			  		var num = $("select option:selected").val();
+			  		var selected = parseInt(num);
+			  		for (var i = 1; i <= 5; i++) {
+			  			if (i <= selected) {
+			  				$("#"+i).show();
+			  			} else {
+			  				$("#"+i).hide();
+			  			}
+			  		}
+			  });
+		 }); 
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>How many boxes do you want to show?</h1>
+		<form>
+			<select>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5" selected>5</option>
+			</select>
+		</form>
+		<div class="box" id="1"></div>
+		<div class="box" id="2"></div>
+		<div class="box" id="3"></div>
+		<div class="box" id="4"></div>
+		<div class="box" id="5"></div>
+	</div>
+</body>
+</html>

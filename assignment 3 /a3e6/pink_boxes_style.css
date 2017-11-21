@@ -8,68 +8,45 @@ body, html {
 	position: relative;
 	
 	width: 80%;
-<<<<<<< HEAD
 	max-height: 80%;
 	max-width: 100%;
 	
-=======
-	max-width: 800px;
->>>>>>> 408e337cc3e73005a499cdbc738b8b128531bc4f
 	margin: auto;
 	margin-top: 10%;
-	background-color: #C5C5C5;
-	border-radius: 5px;
-	padding: 20px;
 }
 
 .row {
 	display: flex;
-	justify-content: space-between;
 
 	height: 200px;
-<<<<<<< HEAD
 	max-width: 800px;
 
-=======
-	margin: auto;
-	max-width: 600px;
-	align-items: center;
-	justify-content: space-between;
->>>>>>> 408e337cc3e73005a499cdbc738b8b128531bc4f
 	/*border: inset green 10px;*/
 }
 
 .box {
 	background-color: #D55071;
 	opacity: 1;
+	margin-right: 0;
 	flex: 0 0 auto;
 	
 	margin: auto; 
+	margin-right: 50px;
 	
 	width: 100px;
 	height: 100px;
-<<<<<<< HEAD
 	
 	transition: all 0.5s ease;
 	
 	/*border: solid 10px black;*/
-=======
-	float:right;
-	padding-right: 20px;
-	opacity: 1;
-	padding: 0px;
->>>>>>> 408e337cc3e73005a499cdbc738b8b128531bc4f
 }
 
 button {
-	float:left;
 	height: 50px;
 	width: 110px;
-	flex: 0 0 auto;
-	border: solid transparent 10px;
 
 	margin: auto;
-	/*margin-left: 50px;*/
+	margin-left: 50px;
 	
 	box-shadow: 2px 2px 5px #888888;
 }
@@ -77,20 +54,17 @@ button {
 .selected > .box{
 	width: 150px;
 	height: 150px;
-	/*border: solid transparent 50px;*/
 	
 	transition: all 0.5s ease;
 }
 
 .selected button {
-	margin-left: calc(+=10px);
 	border: solid #4974A8 10px;
 	box-sizing: content-box;
 	transition: all 0.5s ease;
 }
 
 
-<<<<<<< HEAD
 .slider {
 	margin: auto;
     -webkit-appearance: none;
@@ -119,10 +93,4 @@ button {
     background: #D55071;
     
     cursor: pointer;
-=======
-#slider {
-	fill: #bbb;
-	margin: auto;
-	width: 400px;
->>>>>>> 408e337cc3e73005a499cdbc738b8b128531bc4f
 }

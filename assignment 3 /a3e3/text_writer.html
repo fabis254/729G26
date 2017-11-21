@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text writer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="text_writer_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col text_edit">
+			<textarea id="text_input"></textarea>
+			<select id="style_select">
+				<option valsue="none">no styling</option>
+				<option value="bold">bold</option>
+				<option value="italic">italic</option>					
+				<option value="underline">underlined</option>
+			</select>
+			<button id="style_button">Change style</button>
+		</div>
+		<div id="display" class="col text_display">
+			<h1>Story</h1>
+			<p id="text_output">Once upon a time...</span></p>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+		$("#text_input").on("keyup", function(){
+			$("#text_output").html($(this).val());
+		});
+
+		$("#style_button").on("click", function() {
+			var style = $("#style_select").val();
+			if (style === "none") {
+				$("#text_output").removeClass();
+			} else {
+				$("#text_output").toggleClass($("#style_select").val())
+			}
+		});
+
+	});
+</script>
+
+</html>

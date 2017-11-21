@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text writer advanced</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="text_writer_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col text_edit">
+			<textarea id="text_input"></textarea>
+			<div class="flex">
+				<select id="style_select">
+					<option value="none">no styling</option>
+					<option value="bold">bold</option>
+					<option value="italic">italic</option>					
+					<option value="underline">underlined</option>
+				</select>
+				<button id="style_button">Change style</button>
+				<button id="new_para">New paragraph</button>
+			</div>
+		</div>
+		<div id="display" class="col text_display">
+			<h1>Story</h1>
+			<p id="output1">Once upon a time...</span></p>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+		var active_p = 1;
+		$("#text_input").on("keyup", function(){
+			$("#output" + active_p).html($(this).val());
+		});
+
+		$("#style_button").on("click", function() {
+			var style = $("#style_select").val();
+			if (style === "none") {
+				$("#output" + active_p).removeClass();
+			} else {
+				$("#output" + active_p).toggleClass($("#style_select").val())
+			}
+		});
+
+		$("#new_para").click(function(){
+			active_p = active_p + 1;
+			$("#display").append("<p id=output" + active_p + "></p>");
+			$("#text_input").val('');
+		});
+	});
+</script>
+
+</html>

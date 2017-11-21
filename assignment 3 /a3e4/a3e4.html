@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 3. Exercise 4</title>
+  <meta charset=utf-8>
+  <link rel="stylesheet" type="text/css" href="a3e4.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="container">
+  <div id="row1">
+     <div class="circles"> </div>
+     <div class="circles"> </div>
+     <div class="circles"> </div>
+     <div class="circles"> </div>
+     <div class="circles"> </div>
+     <div class="circles"> </div>    
+  </div>
+  <div id="row2">
+     <div class="squares"> </div>
+     <div class="squares"> </div>
+     <div class="squares"> </div>
+     <div class="squares"> </div>
+     <div class="squares"> </div>
+     <div class="squares"> </div>
+  </div>
+  <div id="row3">
+     <div class="rectangles"> </div>
+     <div class="rectangles"> </div>
+     <div class="rectangles"> </div>
+     <div class="rectangles"> </div>
+     <div class="rectangles"> </div>
+     <div class="rectangles"> </div>
+  </div>
+  </div>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+  	// Change colors on circles when clicked
+  	$(".circles").click(function() {
+  		$(this).toggleClass("green");
+  	});
+  	$(".squares").click(function() {
+  		var curWidth = $(this).width();
+  		var curHeight = $(this).height();
+  		$(this).animate({ "width": curWidth*0.707, "height": curHeight*0.707 });
+  	});
+  	$(".rectangles").click(function() {
+  		$(this).animate({
+  			"marginTop" : "+=10px"
+  		});
+  	});
+  });
+  </script>
+</body>
