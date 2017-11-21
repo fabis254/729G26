@@ -25,8 +25,13 @@
 			max-width: 100%;
 			max-height: 100%;
 		}
+		.ui-menu {width: 150px}
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="menu.js"></script>
     <script src="src/js/lightslider.js"></script> 
     <script>
     	 $(document).ready(function() {
@@ -38,6 +43,7 @@
                 speed:500,
                 auto:true,
                 loop:true,
+                keyPress:true,
                 onSliderLoad: function() {
                     $('#image-gallery').removeClass('cS-hidden');
                 }  
@@ -46,6 +52,7 @@
     </script>
 </head>
 <body>
+	<div id="menubar"></div>
 	<div class="demo" align="center">
         <div class="item">            
             <div class="clearfix" style="max-width:800px;">
